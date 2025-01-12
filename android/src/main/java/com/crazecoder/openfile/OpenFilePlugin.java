@@ -272,6 +272,8 @@ public class OpenFilePlugin implements MethodCallHandler
                 return "text/html";
             case "html":
                 return "text/html";
+            case "ics":
+                return "text/calendar";
             case "jar":
                 return "application/java-archive";
             case "java":
