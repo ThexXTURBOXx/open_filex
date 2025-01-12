@@ -61,6 +61,7 @@ OpenFilex.open("/sdcard/example.txt");
             {".h",      "text/plain"},
             {".htm",    "text/html"},
             {".html",   "text/html"},
+            [".ics",    "text/calendar"},
             {".jar",    "application/java-archive"},
             {".java",   "text/plain"},
             {".jpeg",   "image/jpeg"},
