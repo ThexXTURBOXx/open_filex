@@ -100,7 +100,7 @@ public class OpenFilePlugin implements MethodCallHandler
             } else {
                 typeString = getFileType(filePath);
             }
-            if (pathRequiresPermission()) {
+            /*if (pathRequiresPermission()) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                     if(!isFileAvailable()){
                         return;
@@ -121,9 +121,9 @@ public class OpenFilePlugin implements MethodCallHandler
                 } else if (typeString.startsWith("audio")) {
                     requestPermission(Manifest.permission.READ_MEDIA_AUDIO);
                 }
-            } else {
+            } else {*/
                 startActivity();
-            }
+            //}
         } else {
             result.notImplemented();
             isResultSubmitted = true;
