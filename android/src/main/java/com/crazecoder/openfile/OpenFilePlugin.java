@@ -69,17 +69,6 @@ public class OpenFilePlugin implements MethodCallHandler
     private static final int RESULT_CODE = 0x12;
     private static final String TYPE_STRING_APK = "application/vnd.android.package-archive";
 
-    @Deprecated
-    public static void registerWith(PluginRegistry.Registrar registrar) {
-        OpenFilePlugin plugin = new OpenFilePlugin();
-        plugin.activity = registrar.activity();
-        plugin.context = registrar.context();
-        plugin.channel = new MethodChannel(registrar.messenger(), "open_file");
-        plugin.channel.setMethodCallHandler(plugin);
-        registrar.addRequestPermissionsResultListener(plugin);
-        registrar.addActivityResultListener(plugin);
-    }
-
     private boolean hasPermission(String permission) {
         return ContextCompat.checkSelfPermission(activity, permission) == PermissionChecker.PERMISSION_GRANTED;
     }
